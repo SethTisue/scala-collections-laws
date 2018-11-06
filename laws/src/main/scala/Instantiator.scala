@@ -223,6 +223,7 @@ trait InstantiatorsOfKV[K, V] extends Exploratory[((K, V), Array[(K, V)], Array[
     // MUST use lower-camel-cased collection class name for code generator to work properly!
     val hashMap =   C({ a => val mb = collection.immutable.HashMap.newBuilder[K, V];   for (kv <- a) mb += kv; mb.result }, MAP_CANT_MKSTRING, SUPER_IHASHM)
     val listMap =   C({ a => val mb = collection.immutable.ListMap.newBuilder[K, V];   for (kv <- a) mb += kv; mb.result }, MAP_CANT_MKSTRING)
+    val vectorMap = C({ a => val mb = collection.immutable.VectorMap.newBuilder[K, V]; for (kv <- a) mb += kv; mb.result }, MAP_CANT_MKSTRING)
     val sortedMap = C({ a => val mb = collection.immutable.SortedMap.newBuilder[K, V]; for (kv <- a) mb += kv; mb.result }, MAP_CANT_MKSTRING)
     val treeMap =   C({ a => val mb = collection.immutable.TreeMap.newBuilder[K, V];   for (kv <- a) mb += kv; mb.result }, MAP_CANT_MKSTRING)
   }

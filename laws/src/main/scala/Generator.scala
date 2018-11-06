@@ -385,6 +385,7 @@ object AllLongStrGenerators {
   object ImmKV {
     val hashMap =   register(io.ImmKV)(_.hashMap())
     val listMap =   register(io.ImmKV)(_.listMap())
+    val vectorMap = register(io.ImmKV)(_.vectorMap())
     val sortedMap = register(io.ImmKV)(_.sortedMap())
     val treeMap =   register(io.ImmKV)(_.treeMap())
   }
@@ -440,6 +441,7 @@ object AllStrLongGenerators {
   object ImmKV {
     val hashMap =   register(io.ImmKV)(_.hashMap())
     val listMap =   register(io.ImmKV)(_.listMap())
+    val vectorMap = register(io.ImmKV)(_.vectorMap())
     val sortedMap = register(io.ImmKV)(_.sortedMap())
     val treeMap =   register(io.ImmKV)(_.treeMap())
   }
